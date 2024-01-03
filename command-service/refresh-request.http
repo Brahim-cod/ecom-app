@@ -1,0 +1,4 @@
+POST http://localhost:8088/actuator/refresh
+Accept: application/json
+
+###
