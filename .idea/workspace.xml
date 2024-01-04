@@ -5,6 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a0c0077e-6d51-456e-a61f-95a0434d3e73" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/discovery-service/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/discovery-service/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/discovery-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/discovery-service/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/discovery-service/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/discovery-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/discovery-service/src/main/java/com/ecom/discoveryservice/DiscoveryServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/discovery-service/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/discovery-service/src/test/java/com/ecom/discoveryservice/DiscoveryServiceApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AIR/.env" beforeDir="false" afterPath="$PROJECT_DIR$/../AIR/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AIR/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/../AIR/controllers/userController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AIR/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../AIR/node_modules/.package-lock.json" afterDir="false" />
@@ -12,7 +21,9 @@
       <change beforePath="$PROJECT_DIR$/../AIR/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../AIR/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AIR/routes/userRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/../AIR/routes/userRoutes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AIR/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/../AIR/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,9 +51,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
-        <option value="Class" />
         <option value="HTTP Request" />
+        <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -81,17 +92,23 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "C:/Users/Osaka Gaming Maroc/Projects/ecom-app",
+    "last_opened_file_path": "C:/Users/Osaka Gaming Maroc/Projects/ecom-app/config-repo",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "spring.configuration.checksum": "6d8d342e94453f96071b81ba0cf2a509",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Osaka Gaming Maroc\Projects\ecom-app\config-repo" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Osaka Gaming Maroc\Projects\ecom-app\command-service" />
     </key>
@@ -99,14 +116,13 @@
   <component name="RunDashboard">
     <option name="configurationTypes">
       <set>
+        <option value="Application" />
+        <option value="JarApplication" />
         <option value="SpringBootApplicationConfigurationType" />
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.CommandServiceApplication">
-    <configuration name="refresh-request | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/command-service/refresh-request.http" requestIdentifier="#1" runType="Run single request">
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Spring Boot.ProductServiceApplication">
     <configuration name="CommandServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="command-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.ecom.commandservice.CommandServiceApplication" />
@@ -135,11 +151,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="HTTP Request.refresh-request | #1" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -150,7 +161,7 @@
       <option name="presentableId" value="Default" />
       <updated>1704240065481</updated>
       <workItem from="1704240066933" duration="8200000" />
-      <workItem from="1704324966134" duration="2615000" />
+      <workItem from="1704324966134" duration="7154000" />
     </task>
     <servers />
   </component>

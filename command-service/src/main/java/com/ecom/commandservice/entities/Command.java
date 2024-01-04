@@ -17,4 +17,5 @@ public class Command {
     @Column(name = "created_at")
     private LocalDate createdAt;
     private double amount;
+    private Long productId;
 }
