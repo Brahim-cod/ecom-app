@@ -5,15 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a0c0077e-6d51-456e-a61f-95a0434d3e73" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/discovery-service/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/discovery-service/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/discovery-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/discovery-service/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/discovery-service/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/discovery-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/discovery-service/src/main/java/com/ecom/discoveryservice/DiscoveryServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/discovery-service/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/discovery-service/src/test/java/com/ecom/discoveryservice/DiscoveryServiceApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AIR/.env" beforeDir="false" afterPath="$PROJECT_DIR$/../AIR/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AIR/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/../AIR/controllers/userController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AIR/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../AIR/node_modules/.package-lock.json" afterDir="false" />
@@ -22,8 +13,8 @@
       <change beforePath="$PROJECT_DIR$/../AIR/routes/userRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/../AIR/routes/userRoutes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AIR/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/../AIR/server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,29 +43,26 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTTP Request" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="useMavenConfig" value="true" />
-      </MavenGeneralSettings>
-    </option>
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="workspaceImportEnabled" value="true" />
-      </MavenImportingSettings>
-    </option>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2aQ9ibiMToETL1vDvKZ7BsQh7aO" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -90,9 +78,16 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.CommandServiceApplication.executor": "Run",
+    "Spring Boot.CommandServiceApplication2.executor": "Run",
+    "Spring Boot.ConfigServiceApplication.executor": "Run",
+    "Spring Boot.DiscoveryServiceApplication.executor": "Run",
+    "Spring Boot.GatewayServiceApplication.executor": "Run",
+    "Spring Boot.ProductServiceApplication.executor": "Run",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "C:/Users/Osaka Gaming Maroc/Projects/ecom-app/config-repo",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Osaka Gaming Maroc/Projects/bank-account-app",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -101,7 +96,8 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "spring.configuration.checksum": "6d8d342e94453f96071b81ba0cf2a509",
+    "run.configurations.included.in.services": "true",
+    "spring.configuration.checksum": "2fd8450ff9518e9df56c0edf5f0b86d2",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -118,12 +114,30 @@
       <set>
         <option value="Application" />
         <option value="JarApplication" />
+        <option value="MicronautRunConfigurationType" />
+        <option value="QuarkusRunConfigurationType" />
         <option value="SpringBootApplicationConfigurationType" />
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ProductServiceApplication">
+  <component name="RunManager" selected="Spring Boot.CommandServiceApplication2">
+    <configuration type="CompoundRunConfigurationType">
+      <method v="2" />
+    </configuration>
     <configuration name="CommandServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <envs>
+        <env name="server.port" value="8088" />
+      </envs>
+      <module name="command-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ecom.commandservice.CommandServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CommandServiceApplication2" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <envs>
+        <env name="server.port" value="8089" />
+      </envs>
       <module name="command-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.ecom.commandservice.CommandServiceApplication" />
       <method v="2">
@@ -144,6 +158,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GatewayServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="gateway-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ecom.gatewayservice.GatewayServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ProductServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="product-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.ecom.productservice.ProductServiceApplication" />
@@ -151,6 +172,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Spring Boot.GatewayServiceApplication" />
+      <item itemvalue="Spring Boot.CommandServiceApplication" />
+      <item itemvalue="Spring Boot.CommandServiceApplication2" />
+      <item itemvalue="Spring Boot.ConfigServiceApplication" />
+      <item itemvalue="Spring Boot.DiscoveryServiceApplication" />
+      <item itemvalue="Spring Boot.ProductServiceApplication" />
+    </list>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-17.0.9-corretto-17.0.9-f644763e9732-ebaef533" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -161,7 +197,10 @@
       <option name="presentableId" value="Default" />
       <updated>1704240065481</updated>
       <workItem from="1704240066933" duration="8200000" />
-      <workItem from="1704324966134" duration="7154000" />
+      <workItem from="1704324966134" duration="7323000" />
+      <workItem from="1704411167166" duration="1125000" />
+      <workItem from="1704412772959" duration="1289000" />
+      <workItem from="1704480131511" duration="5245000" />
     </task>
     <servers />
   </component>

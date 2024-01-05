@@ -1,7 +1,7 @@
 package com.ecom.commandservice.web.controller;
 
+import com.ecom.commandservice.dtos.CommandDto;
 import com.ecom.commandservice.entities.Command;
-import com.ecom.commandservice.repository.CommandRepository;
 import com.ecom.commandservice.service.CommandService;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.boot.actuate.health.Health;
@@ -22,30 +22,31 @@ public class CommandController implements HealthIndicator {
     }
 
     @GetMapping("/lastcommands")
-    public ResponseEntity<List<Command>> commandList(){
+    public ResponseEntity<List<CommandDto>> commandList(){
+
         return new ResponseEntity<>(commandService.getLastCommands(), HttpStatus.OK);
     }
     @GetMapping("/commands")
-    public ResponseEntity<List<Command>> allCommands(){
+    public ResponseEntity<List<CommandDto>> allCommands(){
         return new ResponseEntity<>(commandService.getAllCommands(), HttpStatus.OK);
     }
     @GetMapping("/commands/{id}")
-    public ResponseEntity<Command> getCommandById(@PathVariable Long id) {
-        Optional<Command> command = commandService.getCommandById(id);
+    public ResponseEntity<CommandDto> getCommandById(@PathVariable Long id) {
+        Optional<CommandDto> command = commandService.getCommandById(id);
 
         return command.map(value -> new ResponseEntity<>(value, HttpStatus.OK))
                 .orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
     @PostMapping("/commands")
-    public ResponseEntity<Command> createCommand(@RequestBody Command command) {
-        Command createdCommand = commandService.addCommand(command);
+    public ResponseEntity<CommandDto> createCommand(@RequestBody Command command) {
+        CommandDto createdCommand = commandService.addCommand(command);
         return new ResponseEntity<>(createdCommand, HttpStatus.CREATED);
     }
 
     @PutMapping("/commands/{id}")
-    public ResponseEntity<Command> updateCommand(@PathVariable Long id, @RequestBody Command updatedCommand) {
+    public ResponseEntity<CommandDto> updateCommand(@PathVariable Long id, @RequestBody Command updatedCommand) {
         try {
-            Command updated = commandService.updateCommand(id, updatedCommand);
+            CommandDto updated = commandService.updateCommand(id, updatedCommand);
             return new ResponseEntity<>(updated, HttpStatus.OK);
         } catch (EntityNotFoundException e) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
@@ -61,7 +62,7 @@ public class CommandController implements HealthIndicator {
     @Override
     public Health health() {
         System.out.println("****** Actuator : CommandController health() ******");
-        List<Command> commands = commandService.getAllCommands();
+        List<CommandDto> commands = commandService.getAllCommands();
         if (commands.isEmpty()) {
             return Health.down().build();
         }
