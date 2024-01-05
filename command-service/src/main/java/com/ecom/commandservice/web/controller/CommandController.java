@@ -3,6 +3,7 @@ package com.ecom.commandservice.web.controller;
 import com.ecom.commandservice.dtos.CommandDto;
 import com.ecom.commandservice.entities.Command;
 import com.ecom.commandservice.service.CommandService;
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.boot.actuate.health.Health;
 import org.springframework.boot.actuate.health.HealthIndicator;
@@ -10,6 +11,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -22,15 +24,20 @@ public class CommandController implements HealthIndicator {
     }
 
     @GetMapping("/lastcommands")
+    @CircuitBreaker(name = "commandService", fallbackMethod = "getDefaultCommands")
     public ResponseEntity<List<CommandDto>> commandList(){
 
         return new ResponseEntity<>(commandService.getLastCommands(), HttpStatus.OK);
     }
+
     @GetMapping("/commands")
+    @CircuitBreaker(name = "commandService", fallbackMethod = "getDefaultCommands")
     public ResponseEntity<List<CommandDto>> allCommands(){
         return new ResponseEntity<>(commandService.getAllCommands(), HttpStatus.OK);
     }
+
     @GetMapping("/commands/{id}")
+    @CircuitBreaker(name = "commandService", fallbackMethod = "getDefaultCommand")
     public ResponseEntity<CommandDto> getCommandById(@PathVariable Long id) {
         Optional<CommandDto> command = commandService.getCommandById(id);
 
@@ -57,6 +64,20 @@ public class CommandController implements HealthIndicator {
     public ResponseEntity<Void> deleteCommand(@PathVariable Long id) {
         commandService.deleteCommand(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    }
+
+    public List<CommandDto> getDefaultCommands(Exception exception){
+        return List.of();
+    }
+    public CommandDto getDefaultCommand(Long id, Exception exception){
+        return CommandDto.builder()
+                .id(id)
+                .description("Default")
+                .quantity(10)
+                .amount(100)
+                .createdAt(LocalDate.now())
+                .product(null)
+                .build();
     }
 
     @Override

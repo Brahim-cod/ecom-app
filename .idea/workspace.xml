@@ -12,10 +12,8 @@
       <change beforePath="$PROJECT_DIR$/../AIR/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../AIR/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AIR/routes/userRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/../AIR/routes/userRoutes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AIR/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/../AIR/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-repo" beforeDir="false" afterPath="$PROJECT_DIR$/config-repo" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +47,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/config-repo" />
   </component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
@@ -87,7 +85,7 @@
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "17",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Osaka Gaming Maroc/Projects/bank-account-app",
+    "last_opened_file_path": "C:/Users/Osaka Gaming Maroc/Projects/ecom-app",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -200,7 +198,8 @@
       <workItem from="1704324966134" duration="7323000" />
       <workItem from="1704411167166" duration="1125000" />
       <workItem from="1704412772959" duration="1289000" />
-      <workItem from="1704480131511" duration="5245000" />
+      <workItem from="1704480131511" duration="6296000" />
+      <workItem from="1704487158296" duration="2587000" />
     </task>
     <servers />
   </component>

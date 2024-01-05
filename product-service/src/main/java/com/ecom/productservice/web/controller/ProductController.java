@@ -2,6 +2,7 @@ package com.ecom.productservice.web.controller;
 
 import com.ecom.productservice.entities.Product;
 import com.ecom.productservice.service.ProductService;
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -25,12 +26,14 @@ public class ProductController {
 
     // Read operations
     @GetMapping("/products")
+    @CircuitBreaker(name = "productService", fallbackMethod = "getDefaultProducts")
     public ResponseEntity<List<Product>> getAllProducts() {
         List<Product> products = productService.getAllProducts();
         return new ResponseEntity<>(products, HttpStatus.OK);
     }
 
     @GetMapping("/products/{id}")
+    @CircuitBreaker(name = "productService", fallbackMethod = "getDefaultProduct")
     public ResponseEntity<Product> getProductById(@PathVariable Long id) {
         return productService.getProductById(id)
                 .map(product -> new ResponseEntity<>(product, HttpStatus.OK))
@@ -49,5 +52,18 @@ public class ProductController {
     public ResponseEntity<Void> deleteProduct(@PathVariable Long id) {
         productService.deleteProduct(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    }
+
+    public Product getDefaultProduct(Long id,Exception exception){
+        return Product.builder()
+                .id(id)
+                .title("Default")
+                .price(100)
+                .quantity(10)
+                .build();
+    }
+
+    public List<Product> getDefaultProducts(Exception exception){
+        return List.of();
     }
 }
