@@ -13,7 +13,6 @@
       <change beforePath="$PROJECT_DIR$/../AIR/routes/userRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/../AIR/routes/userRoutes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AIR/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/../AIR/server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-repo" beforeDir="false" afterPath="$PROJECT_DIR$/config-repo" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +47,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/config-repo" />
+    <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
@@ -199,7 +199,7 @@
       <workItem from="1704411167166" duration="1125000" />
       <workItem from="1704412772959" duration="1289000" />
       <workItem from="1704480131511" duration="6296000" />
-      <workItem from="1704487158296" duration="2587000" />
+      <workItem from="1704487158296" duration="6708000" />
     </task>
     <servers />
   </component>
