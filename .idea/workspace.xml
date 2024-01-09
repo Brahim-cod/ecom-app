@@ -99,6 +99,9 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Osaka Gaming Maroc\Projects\ecom-app\config-repo" />
@@ -118,7 +121,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.CommandServiceApplication2">
+  <component name="RunManager" selected="Spring Boot.CommandServiceApplication">
     <configuration type="CompoundRunConfigurationType">
       <method v="2" />
     </configuration>
@@ -200,6 +203,7 @@
       <workItem from="1704412772959" duration="1289000" />
       <workItem from="1704480131511" duration="6296000" />
       <workItem from="1704487158296" duration="6708000" />
+      <workItem from="1704755205798" duration="7333000" />
     </task>
     <servers />
   </component>

@@ -1,7 +1,6 @@
 package com.ecom.commandservice.dtos;
 
-import com.ecom.commandservice.entities.Command;
-import com.ecom.commandservice.model.Product;
+import jakarta.persistence.Column;
 import lombok.*;
 
 import java.time.LocalDate;
@@ -11,12 +10,10 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @ToString
 @Builder
-public class CommandDto {
-    private Long id;
+public class CommandRegistrationgDto {
     private String description;
     private int quantity;
     private LocalDate createdAt;
     private double amount;
-    private Product product;
-
+    private Long productId;
 }

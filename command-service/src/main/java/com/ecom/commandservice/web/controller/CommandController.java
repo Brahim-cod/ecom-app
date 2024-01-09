@@ -1,6 +1,7 @@
 package com.ecom.commandservice.web.controller;
 
 import com.ecom.commandservice.dtos.CommandDto;
+import com.ecom.commandservice.dtos.CommandRegistrationgDto;
 import com.ecom.commandservice.entities.Command;
 import com.ecom.commandservice.service.CommandService;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
@@ -26,7 +27,6 @@ public class CommandController implements HealthIndicator {
     @GetMapping("/lastcommands")
     @CircuitBreaker(name = "commandService", fallbackMethod = "getDefaultCommands")
     public ResponseEntity<List<CommandDto>> commandList(){
-
         return new ResponseEntity<>(commandService.getLastCommands(), HttpStatus.OK);
     }
 
@@ -45,13 +45,13 @@ public class CommandController implements HealthIndicator {
                 .orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
     @PostMapping("/commands")
-    public ResponseEntity<CommandDto> createCommand(@RequestBody Command command) {
+    public ResponseEntity<CommandDto> createCommand(@RequestBody CommandRegistrationgDto command) {
         CommandDto createdCommand = commandService.addCommand(command);
         return new ResponseEntity<>(createdCommand, HttpStatus.CREATED);
     }
 
     @PutMapping("/commands/{id}")
-    public ResponseEntity<CommandDto> updateCommand(@PathVariable Long id, @RequestBody Command updatedCommand) {
+    public ResponseEntity<CommandDto> updateCommand(@PathVariable Long id, @RequestBody CommandRegistrationgDto updatedCommand) {
         try {
             CommandDto updated = commandService.updateCommand(id, updatedCommand);
             return new ResponseEntity<>(updated, HttpStatus.OK);
