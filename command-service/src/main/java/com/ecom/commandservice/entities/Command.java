@@ -18,4 +18,5 @@ public class Command {
     private LocalDate createdAt;
     private double amount;
     private Long productId;
+    private Long userId;
 }

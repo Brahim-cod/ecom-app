@@ -16,4 +16,5 @@ public class CommandRegistrationgDto {
     private LocalDate createdAt;
     private double amount;
     private Long productId;
+    private Long userId;
 }

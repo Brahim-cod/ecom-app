@@ -40,6 +40,7 @@ public class CommandServiceApplication {
                         .createdAt(LocalDate.now().minusDays(i + 1))
                         .amount(generateamount(product.getPrice(), quantity))
                         .productId(product.getId())
+                        .userId(Long.valueOf(1))
                         .build();
                 commandRepository.save(command);
             }

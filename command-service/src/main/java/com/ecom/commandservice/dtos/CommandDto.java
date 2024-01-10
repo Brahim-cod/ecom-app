@@ -2,6 +2,7 @@ package com.ecom.commandservice.dtos;
 
 import com.ecom.commandservice.entities.Command;
 import com.ecom.commandservice.model.Product;
+import com.ecom.commandservice.model.User;
 import lombok.*;
 
 import java.time.LocalDate;
@@ -18,5 +19,6 @@ public class CommandDto {
     private LocalDate createdAt;
     private double amount;
     private Product product;
+    private User user;
 
 }

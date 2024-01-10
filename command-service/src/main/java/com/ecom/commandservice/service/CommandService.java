@@ -1,6 +1,7 @@
 package com.ecom.commandservice.service;
 
 import com.ecom.commandservice.clients.ProductRestClient;
+import com.ecom.commandservice.clients.UserRestClient;
 import com.ecom.commandservice.configuration.ApplicationConfiguration;
 import com.ecom.commandservice.dtos.CommandDto;
 import com.ecom.commandservice.dtos.CommandRegistrationgDto;
@@ -22,12 +23,14 @@ public class CommandService {
     private CommandRepository commandRepository;
     private ApplicationConfiguration applicationConfiguration;
     private ProductRestClient productRestClient;
+    private UserRestClient userRestClient;
     private CommandMapper commandMapper;
 
-    public CommandService(CommandRepository commandRepository, ApplicationConfiguration applicationConfiguration, ProductRestClient productRestClient, CommandMapper commandMapper) {
+    public CommandService(CommandRepository commandRepository, ApplicationConfiguration applicationConfiguration, ProductRestClient productRestClient, UserRestClient userRestClient, CommandMapper commandMapper) {
         this.commandRepository = commandRepository;
         this.applicationConfiguration = applicationConfiguration;
         this.productRestClient = productRestClient;
+        this.userRestClient = userRestClient;
         this.commandMapper = commandMapper;
     }
 
@@ -52,12 +55,13 @@ public class CommandService {
     }
     public CommandDto addCommand(CommandRegistrationgDto command){
         var product = productRestClient.findById(command.getProductId());
-        if (product != null){
+        var user = userRestClient.findById(command.getUserId());
+        if (product != null && user != null){
             ChangeProductQuantity(product, command.getQuantity(), ((current, toAdd) -> current - toAdd));
             return commandMapper.convertToDto(commandRepository.save(commandMapper.convertToBto(command)));
         }
         else
-            throw new RuntimeException("Product Not Found");
+            throw new RuntimeException("Product/User Not Found");
     }
     public CommandDto updateCommand(Long id, CommandRegistrationgDto updatedCommand) {
         Optional<CommandDto> existingCommandOptional = getCommandById(id);
