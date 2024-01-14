@@ -9,28 +9,36 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class ProductService {
+public class ProductService implements IProductService {
     private ProductRepository productRepository;
 
     public ProductService(ProductRepository productRepository) {
         this.productRepository = productRepository;
     }
 
+    @Override
     public Product createProduct(Product product) {
         // Add any business logic or validation before saving
         return productRepository.save(product);
     }
 
     // Read operations
+    @Override
     public List<Product> getAllProducts() {
         return productRepository.findAll();
     }
+    @Override
+    public List<Product> getProductsByCategory(Long id) {
+        return productRepository.findAllByCategory_Id(id);
+    }
 
+    @Override
     public Optional<Product> getProductById(Long id) {
         return productRepository.findById(id);
     }
 
     // Update operation
+    @Override
     public Product updateProduct(Long id, Product updatedProduct) {
         return productRepository.findById(id)
                 .map(existingProduct -> {
@@ -46,6 +54,7 @@ public class ProductService {
     }
 
     // Delete operation
+    @Override
     public void deleteProduct(Long id) {
         if (productRepository.existsById(id)) {
             productRepository.deleteById(id);

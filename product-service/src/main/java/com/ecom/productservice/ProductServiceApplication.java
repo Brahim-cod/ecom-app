@@ -1,6 +1,8 @@
 package com.ecom.productservice;
 
+import com.ecom.productservice.entities.Category;
 import com.ecom.productservice.entities.Product;
+import com.ecom.productservice.repository.CategoryRepository;
 import com.ecom.productservice.repository.ProductRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -19,15 +21,21 @@ public class ProductServiceApplication {
     }
 
     @Bean
-    CommandLineRunner commandLineRunner(ProductRepository productRepository){
+    CommandLineRunner commandLineRunner(ProductRepository productRepository, CategoryRepository categoryRepository){
         return args -> {
             Random random = new Random();
 
-            for (int i = 1; i <= 30; i++){
+            for (int i = 1; i <= 10; i++){
+                Category category = Category.builder()
+                        .name("Category " + i)
+                        .build();
+                categoryRepository.save(category);
+
                 Product product = Product.builder()
                         .title("Product Title " + i)
                         .price(generateRandomDouble(10, 200, random))
                         .quantity(random.nextInt(50) + 1)
+                        .category(category)
                         .build();
                 productRepository.save(product);
             }
@@ -35,7 +43,7 @@ public class ProductServiceApplication {
     }
 
     public static double generateRandomDouble(double min, double max, Random random) {
-        return min + (max - min) * random.nextDouble();
+        return Math.floor(min + (max - min) * random.nextDouble());
     }
 
 }

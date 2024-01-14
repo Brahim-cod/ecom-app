@@ -108,7 +108,7 @@ const Sidebar = ({ openSidebarToggle, OpenSidebar }) => {
           Previous Order
         </NavLink>
         
-        {loginUser?.role === "admin" ? (
+        {loginUser?.role === "ADMIN" ? (
           <>
             <NavLink
               to='/customer'

@@ -4,6 +4,7 @@ import com.ecom.commandservice.dtos.CommandDto;
 import com.ecom.commandservice.dtos.CommandRegistrationgDto;
 import com.ecom.commandservice.entities.Command;
 import com.ecom.commandservice.service.CommandService;
+import com.ecom.commandservice.service.ICommandService;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.boot.actuate.health.Health;
@@ -18,9 +19,9 @@ import java.util.Optional;
 
 @RestController
 public class CommandController implements HealthIndicator {
-    private CommandService commandService;
+    private ICommandService commandService;
 
-    public CommandController(CommandService commandService) {
+    public CommandController(ICommandService commandService) {
         this.commandService = commandService;
     }
 
@@ -64,6 +65,11 @@ public class CommandController implements HealthIndicator {
     public ResponseEntity<Void> deleteCommand(@PathVariable Long id) {
         commandService.deleteCommand(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    }
+
+    @GetMapping("/commands/user/{id}")
+    public ResponseEntity<List<CommandDto>> allCommandsByUser(@PathVariable Long id){
+        return new ResponseEntity<>(commandService.getAllCommandsByUser(id), HttpStatus.OK);
     }
 
     public List<CommandDto> getDefaultCommands(Exception exception){

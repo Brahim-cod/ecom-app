@@ -30,11 +30,11 @@ const ToggleProvider = ({ children }) => {
     getCats();
   }, []);
 
-  const fetchDataByCategory = async (categoryName) => {
+  const fetchDataByCategory = async (categoryId) => {
     setData([]);
     try {
       const response = await axiosInstance.get(
-        `/prods/category/${categoryName}`
+        `/PRODUCT-SERVICE/products/category/${categoryId}`
       );
       setData(response.data);
       // console.log(response.data)
@@ -42,15 +42,15 @@ const ToggleProvider = ({ children }) => {
       console.error("Error:", error);
     }
   };
-  const handleCategoryClick = (categoryName, index) => {
+  const handleCategoryClick = (categoryId, index) => {
     setToggleState(index);
-    fetchDataByCategory(categoryName);
+    fetchDataByCategory(categoryId);
   };
 
   const handleSubmit = async (e, searchValue) => {
     e.preventDefault();
     if (e && searchValue) {
-      const response = await axiosInstance.get(`/prods`);
+      const response = await axiosInstance.get(`/PRODUCT-SERVICE/products`);
 
       const searchData = response.data;
 
@@ -63,7 +63,7 @@ const ToggleProvider = ({ children }) => {
       setFilteredData(filteredData);
     } else {
       setFilteredData("");
-      handleCategoryClick("BOISSON CHAUDE", 1);
+      handleCategoryClick(1, 1);
     }
     // console.log(searchValue, filteredData);
   };

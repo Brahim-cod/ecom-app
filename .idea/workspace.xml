@@ -12,10 +12,16 @@
       <change beforePath="$PROJECT_DIR$/../AIR/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../AIR/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AIR/routes/userRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/../AIR/routes/userRoutes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AIR/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/../AIR/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-service/src/context/ToggleProvider.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-service/src/context/ToggleProvider.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-service/src/pages/Dashboard/Sidebar/Sidebar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-service/src/pages/Dashboard/Sidebar/Sidebar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/ecom/userservice/UserServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/ecom/userservice/UserServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/ecom/userservice/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/ecom/userservice/entities/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/ecom/userservice/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/ecom/userservice/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/ecom/userservice/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/ecom/userservice/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/ecom/userservice/web/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/ecom/userservice/web/controller/UserController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,8 +49,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTTP Request" />
-        <option value="Class" />
+        <option value="Enum" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -72,6 +79,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.All in product-service.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -94,6 +102,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "node",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
@@ -113,6 +122,11 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Osaka Gaming Maroc\Projects\ecom-app\command-service" />
     </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="com.ecom.commandservice.service" />
+      <recent name="com.ecom.productservice.service" />
+      <recent name="com.ecom.userservice.service" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
@@ -125,8 +139,27 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.CommandServiceApplication">
+  <component name="RunManager" selected="JUnit.All in product-service (1)">
     <configuration type="CompoundRunConfigurationType">
+      <method v="2" />
+    </configuration>
+    <configuration name="All in product-service (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="product-service" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in product-service" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="product-service" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
     <configuration name="CommandServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
@@ -185,6 +218,9 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="JavaScript Debug.Debug Application" />
+      <item itemvalue="JUnit.All in product-service" />
+      <item itemvalue="JUnit.All in product-service (1)" />
       <item itemvalue="Spring Boot.UserServiceApplication" />
       <item itemvalue="Spring Boot.GatewayServiceApplication" />
       <item itemvalue="Spring Boot.CommandServiceApplication" />
@@ -193,6 +229,12 @@
       <item itemvalue="Spring Boot.DiscoveryServiceApplication" />
       <item itemvalue="Spring Boot.ProductServiceApplication" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.All in product-service (1)" />
+        <item itemvalue="JUnit.All in product-service" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -216,7 +258,12 @@
       <workItem from="1704480131511" duration="6296000" />
       <workItem from="1704487158296" duration="6708000" />
       <workItem from="1704755205798" duration="7649000" />
-      <workItem from="1704837940053" duration="3832000" />
+      <workItem from="1704837940053" duration="3985000" />
+      <workItem from="1705009105711" duration="2398000" />
+      <workItem from="1705100890112" duration="9527000" />
+      <workItem from="1705180673208" duration="609000" />
+      <workItem from="1705193840737" duration="9799000" />
+      <workItem from="1705265817348" duration="5420000" />
     </task>
     <servers />
   </component>

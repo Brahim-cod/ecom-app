@@ -1,6 +1,7 @@
 package com.ecom.productservice.web.controller;
 
 import com.ecom.productservice.entities.Product;
+import com.ecom.productservice.service.IProductService;
 import com.ecom.productservice.service.ProductService;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import org.springframework.http.HttpStatus;
@@ -10,10 +11,11 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+//@CrossOrigin(origins = "http://localhost:3000")
 public class ProductController {
-    private ProductService productService;
+    private IProductService productService;
 
-    public ProductController(ProductService productService) {
+    public ProductController(IProductService productService) {
         this.productService = productService;
     }
 
@@ -29,6 +31,12 @@ public class ProductController {
     @CircuitBreaker(name = "productService", fallbackMethod = "getDefaultProducts")
     public ResponseEntity<List<Product>> getAllProducts() {
         List<Product> products = productService.getAllProducts();
+        return new ResponseEntity<>(products, HttpStatus.OK);
+    }
+    @GetMapping("/products/category/{id}")
+    @CircuitBreaker(name = "productService", fallbackMethod = "getDefaultProducts")
+    public ResponseEntity<List<Product>> getProductsByCategory(@PathVariable Long id) {
+        List<Product> products = productService.getProductsByCategory(id);
         return new ResponseEntity<>(products, HttpStatus.OK);
     }
 

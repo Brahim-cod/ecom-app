@@ -19,7 +19,7 @@ import java.util.Optional;
 import java.util.function.IntBinaryOperator;
 
 @Service
-public class CommandService {
+public class CommandService implements ICommandService {
     private CommandRepository commandRepository;
     private ApplicationConfiguration applicationConfiguration;
     private ProductRestClient productRestClient;
@@ -35,6 +35,7 @@ public class CommandService {
     }
 
 
+    @Override
     public List<CommandDto> getLastCommands() {
         int days = applicationConfiguration.getCommandesLast();
         System.out.println("************ CommandLast = " + days + " ***********");
@@ -44,15 +45,25 @@ public class CommandService {
                 .map(command -> commandMapper.convertToDto(command)).toList();
         return commands;
     }
+    @Override
     public List<CommandDto> getAllCommands(){
         var commands = commandRepository.findAll().
                 stream()
                 .map(command -> commandMapper.convertToDto(command)).toList();
         return commands;
     }
+    @Override
+    public List<CommandDto> getAllCommandsByUser(Long userId){
+        var commands = commandRepository.findAllByUserId(userId).
+                stream()
+                .map(command -> commandMapper.convertToDto(command)).toList();
+        return commands;
+    }
+    @Override
     public Optional<CommandDto> getCommandById(Long id) {
         return Optional.of(commandMapper.convertToDto(commandRepository.findById(id).get()));
     }
+    @Override
     public CommandDto addCommand(CommandRegistrationgDto command){
         var product = productRestClient.findById(command.getProductId());
         var user = userRestClient.findById(command.getUserId());
@@ -63,6 +74,7 @@ public class CommandService {
         else
             throw new RuntimeException("Product/User Not Found");
     }
+    @Override
     public CommandDto updateCommand(Long id, CommandRegistrationgDto updatedCommand) {
         Optional<CommandDto> existingCommandOptional = getCommandById(id);
 
@@ -88,6 +100,7 @@ public class CommandService {
             throw new EntityNotFoundException("Command with id " + id + " not found");
         }
     }
+    @Override
     public void deleteCommand(Long id) {
         commandRepository.deleteById(id);
     }

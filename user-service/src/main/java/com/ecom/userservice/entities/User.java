@@ -1,5 +1,6 @@
 package com.ecom.userservice.entities;
 
+import com.ecom.userservice.enums.Role;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -15,4 +16,6 @@ public class User {
     private String password;
     private String email;
     private String phone;
+    @Enumerated(value = EnumType.STRING)
+    private Role role;
 }

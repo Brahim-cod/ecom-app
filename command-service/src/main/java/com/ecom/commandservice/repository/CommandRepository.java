@@ -10,4 +10,6 @@ import java.util.List;
 public interface CommandRepository extends JpaRepository<Command, Long> {
     @Query("SELECT c FROM Command c WHERE c.createdAt >= :startDate")
     List<Command> findLastCommands(LocalDate startDate);
+
+    List<Command> findAllByUserId(Long userId);
 }
